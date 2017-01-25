@@ -18,7 +18,7 @@ public class CheckoutSteps {
         checkoutBehaviour.completeForm();
     }
 
-    @When("submitting form")
+    @When("submitting checkout form")
     public void submitForm(){
         checkoutBehaviour.submitForm();
     }
