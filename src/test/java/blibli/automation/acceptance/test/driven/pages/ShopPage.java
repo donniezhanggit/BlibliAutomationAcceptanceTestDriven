@@ -17,5 +17,14 @@ public class ShopPage extends PageObject{
     @FindBy(xpath = ".//*[@id='catalogProductListContentDiv']/div[1]")
     private WebElementFacade itemToBeBought;
 
+    @FindBy(id = "MyBtn")
+    private WebElementFacade btnBuy;
+
+    @FindBy(id = "gdn-cart-button")
+    private WebElementFacade btnCart;
+
+    @FindBy(id = "gdn-sb-page-continue-checkout")
+    private WebElementFacade btnCheckout;
+
 
 }

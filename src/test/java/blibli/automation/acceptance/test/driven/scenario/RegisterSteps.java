@@ -1,6 +1,6 @@
 package blibli.automation.acceptance.test.driven.scenario;
 
-import blibli.automation.acceptance.test.driven.behaviour.HeaderBehaviour;
+import blibli.automation.acceptance.test.driven.behaviour.RegisterBehaviour;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 
@@ -9,16 +9,16 @@ import org.jbehave.core.annotations.Given;
  */
 public class RegisterSteps {
     @Steps
-    HeaderBehaviour headerBehaviour;
+    RegisterBehaviour registerBehaviour;
 
     @Given("open and access home page")
     public void givenOpenHomePage(){
-        headerBehaviour.accessBlibliUrl();
+        registerBehaviour.accessBlibliUrl();
     }
 
     @Given("register new user")
     public void givenRegisterProses(){
-        headerBehaviour.clickRegister();
+        registerBehaviour.clickRegister();
     }
 
 

@@ -7,7 +7,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 /**
  * Created by isdzulqor on 1/25/17.
  */
-public class Header extends PageObject {
+public class RegisterPage extends PageObject {
     @FindBy(id = "registrationFormEmailAddress")
     private WebElementFacade email;
 
