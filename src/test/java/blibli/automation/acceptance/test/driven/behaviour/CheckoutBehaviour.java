@@ -23,6 +23,7 @@ public class CheckoutBehaviour extends RegisterBehaviour {
         checkoutPage.getDaySelect().selectByVisibleText(Config.DATE_BIRTH);
         checkoutPage.getMonthSelect().selectByVisibleText(Config.MONTH_BIRTH);
         checkoutPage.getYearSelect().selectByVisibleText(Config.YEAR_BIRTH);
+        checkoutPage.getRbMan().click();
         checkoutPage.getPhoneField().type(Config.PHONE);
 
         checkoutPage.getBtnSubmit().click();
@@ -39,6 +40,12 @@ public class CheckoutBehaviour extends RegisterBehaviour {
 
     @Step
     public void finishCheckout(){
-
+        checkoutPage.getRbTransfer().click();
+        checkoutPage.getBankSelect().selectByVisibleText(Config.BANK);
+        checkoutPage.getBtnPayNow().click();
+        //tunggu ke halaman terima kasih,transaksi diproses
+        waitABit(500);
     }
+
+
 }
