@@ -39,6 +39,11 @@ public class ShopBehaviour extends RegisterBehaviour {
         shopPage.getBtnCheckout().click();
     }
 
+    @Step
+    public void isCartAdded(){
+        TestCase.assertTrue(shopPage.getProductInfo().getText().equals(Config.ITEM_BOUGHT));
+    }
+
     public boolean isInHomePage(){
         if(shopPage.getDriver().getTitle().equals("Toko Online Blibli.com, Sensasi Belanja Online Shop ala Mall"))
             return true;
@@ -46,10 +51,7 @@ public class ShopBehaviour extends RegisterBehaviour {
             return false;
     }
 
-    @Step
-    public void isCartAdded(){
-        TestCase.assertTrue(shopPage.getProductInfo().getText().equals(Config.ITEM_BOUGHT));
-    }
+
 
 
 }

@@ -2,6 +2,7 @@ package blibli.automation.acceptance.test.driven.behaviour;
 
 import blibli.automation.acceptance.test.driven.Config;
 import blibli.automation.acceptance.test.driven.pages.CheckoutPage;
+import junit.framework.TestCase;
 import net.thucydides.core.annotations.Step;
 
 /**
@@ -25,23 +26,29 @@ public class CheckoutBehaviour extends RegisterBehaviour {
         checkoutPage.getYearSelect().selectByVisibleText(Config.YEAR_BIRTH);
         checkoutPage.getRbMan().click();
         checkoutPage.getPhoneField().type(Config.PHONE);
+    }
 
+    @Step
+    public void submitForm(){
         checkoutPage.getBtnSubmit().click();
     }
 
     @Step
     public void continueCheckout(){
-        if(checkoutPage.getDriver().getTitle().equals("Formulir Pengiriman & Pembayaran Blibli.com")){
-            checkoutPage.getBtnContinueCheckout().click();
-            //tunggu ke halaman checkout
-            waitABit(500);
-        }
+        TestCase.assertTrue(checkoutPage.getDriver().getTitle().equals("Formulir Pengiriman & Pembayaran Blibli.com"));
+        checkoutPage.getBtnContinueCheckout().click();
+        //tunggu ke halaman checkout
+        waitABit(500);
+    }
+
+    @Step
+    public void choosePayment(){
+        checkoutPage.getRbTransfer().click();
+        checkoutPage.getBankSelect().selectByVisibleText(Config.BANK);
     }
 
     @Step
     public void finishCheckout(){
-        checkoutPage.getRbTransfer().click();
-        checkoutPage.getBankSelect().selectByVisibleText(Config.BANK);
         checkoutPage.getBtnPayNow().click();
         //tunggu ke halaman terima kasih,transaksi diproses
         waitABit(500);
