@@ -26,7 +26,6 @@ public class ShopPage extends PageObject{
     @FindBy(id = "gdn-sb-page-continue-checkout")
     private WebElementFacade btnCheckout;
 
-
     public WebElementFacade getSearchField() {
         return searchField;
     }

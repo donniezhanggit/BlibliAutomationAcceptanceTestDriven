@@ -19,6 +19,7 @@ public class ShopBehaviour extends RegisterBehaviour {
         shopPage.getBtnSearch().click();
         //tunggu hasil pencarian
         waitABit(500);
+        //add to cart
         shopPage.getItemToBeBought().click();
     }
 

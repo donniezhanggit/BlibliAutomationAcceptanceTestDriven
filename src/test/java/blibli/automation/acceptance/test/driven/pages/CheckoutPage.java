@@ -1,12 +1,13 @@
 package blibli.automation.acceptance.test.driven.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
+import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 
 /**
  * Created by isdzulqor on 1/25/17.
  */
-public class CheckoutPage {
+public class CheckoutPage extends PageObject {
     @FindBy(id = "gdn-profile-name")
     private WebElementFacade fullNameField;
 
@@ -56,7 +57,131 @@ public class CheckoutPage {
     private WebElementFacade btnPayNow;
 
 
+    public WebElementFacade getFullNameField() {
+        return fullNameField;
+    }
 
+    public void setFullNameField(WebElementFacade fullNameField) {
+        this.fullNameField = fullNameField;
+    }
 
+    public WebElementFacade getAddressField() {
+        return addressField;
+    }
 
+    public void setAddressField(WebElementFacade addressField) {
+        this.addressField = addressField;
+    }
+
+    public WebElementFacade getProvinceSelect() {
+        return provinceSelect;
+    }
+
+    public void setProvinceSelect(WebElementFacade provinceSelect) {
+        this.provinceSelect = provinceSelect;
+    }
+
+    public WebElementFacade getCitySelect() {
+        return citySelect;
+    }
+
+    public void setCitySelect(WebElementFacade citySelect) {
+        this.citySelect = citySelect;
+    }
+
+    public WebElementFacade getKecamatanSelect() {
+        return kecamatanSelect;
+    }
+
+    public void setKecamatanSelect(WebElementFacade kecamatanSelect) {
+        this.kecamatanSelect = kecamatanSelect;
+    }
+
+    public WebElementFacade getKelurahanSelect() {
+        return kelurahanSelect;
+    }
+
+    public void setKelurahanSelect(WebElementFacade kelurahanSelect) {
+        this.kelurahanSelect = kelurahanSelect;
+    }
+
+    public WebElementFacade getDaySelect() {
+        return daySelect;
+    }
+
+    public void setDaySelect(WebElementFacade daySelect) {
+        this.daySelect = daySelect;
+    }
+
+    public WebElementFacade getMonthSelect() {
+        return monthSelect;
+    }
+
+    public void setMonthSelect(WebElementFacade monthSelect) {
+        this.monthSelect = monthSelect;
+    }
+
+    public WebElementFacade getYearSelect() {
+        return yearSelect;
+    }
+
+    public void setYearSelect(WebElementFacade yearSelect) {
+        this.yearSelect = yearSelect;
+    }
+
+    public WebElementFacade getPhoneField() {
+        return phoneField;
+    }
+
+    public void setPhoneField(WebElementFacade phoneField) {
+        this.phoneField = phoneField;
+    }
+
+    public WebElementFacade getRbMan() {
+        return rbMan;
+    }
+
+    public void setRbMan(WebElementFacade rbMan) {
+        this.rbMan = rbMan;
+    }
+
+    public WebElementFacade getBtnSubmit() {
+        return btnSubmit;
+    }
+
+    public void setBtnSubmit(WebElementFacade btnSubmit) {
+        this.btnSubmit = btnSubmit;
+    }
+
+    public WebElementFacade getBtnContinueCheckout() {
+        return btnContinueCheckout;
+    }
+
+    public void setBtnContinueCheckout(WebElementFacade btnContinueCheckout) {
+        this.btnContinueCheckout = btnContinueCheckout;
+    }
+
+    public WebElementFacade getRbTransfer() {
+        return rbTransfer;
+    }
+
+    public void setRbTransfer(WebElementFacade rbTransfer) {
+        this.rbTransfer = rbTransfer;
+    }
+
+    public WebElementFacade getBankSelect() {
+        return bankSelect;
+    }
+
+    public void setBankSelect(WebElementFacade bankSelect) {
+        this.bankSelect = bankSelect;
+    }
+
+    public WebElementFacade getBtnPayNow() {
+        return btnPayNow;
+    }
+
+    public void setBtnPayNow(WebElementFacade btnPayNow) {
+        this.btnPayNow = btnPayNow;
+    }
 }
