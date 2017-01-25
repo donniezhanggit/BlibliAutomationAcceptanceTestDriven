@@ -19,4 +19,5 @@ public final class Config {
     public final static String YEAR_BIRTH="1996";
     public final static String PHONE="087851084540";
     public final static String BANK="Mandiri";
+    public static String ITEM_BOUGHT;
 }

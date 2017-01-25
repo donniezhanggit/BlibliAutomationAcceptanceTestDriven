@@ -14,7 +14,7 @@ public class ShopPage extends PageObject{
     @FindBy(ngModel = "gdn-search-button")
     private WebElementFacade btnSearch;
 
-    @FindBy(xpath = ".//*[@id='catalogProductListContentDiv']/div[1]")
+    @FindBy(xpath = ".//*[@id='catalogProductListContentDiv']/div[1]/div/a/div/div/div/div[2]")
     private WebElementFacade itemToBeBought;
 
     @FindBy(id = "MyBtn")
@@ -25,6 +25,9 @@ public class ShopPage extends PageObject{
 
     @FindBy(id = "gdn-sb-page-continue-checkout")
     private WebElementFacade btnCheckout;
+
+    @FindBy(className = "bag-product-title ng-binding")
+    private WebElementFacade productInfo;
 
     public WebElementFacade getSearchField() {
         return searchField;
@@ -72,5 +75,13 @@ public class ShopPage extends PageObject{
 
     public void setBtnCheckout(WebElementFacade btnCheckout) {
         this.btnCheckout = btnCheckout;
+    }
+
+    public WebElementFacade getProductInfo() {
+        return productInfo;
+    }
+
+    public void setProductInfo(WebElementFacade productInfo) {
+        this.productInfo = productInfo;
     }
 }

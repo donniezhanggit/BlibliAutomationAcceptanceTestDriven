@@ -2,6 +2,7 @@ package blibli.automation.acceptance.test.driven.behaviour;
 
 import blibli.automation.acceptance.test.driven.Config;
 import blibli.automation.acceptance.test.driven.pages.ShopPage;
+import junit.framework.TestCase;
 import net.thucydides.core.annotations.Step;
 
 /**
@@ -19,7 +20,13 @@ public class ShopBehaviour extends RegisterBehaviour {
         shopPage.getBtnSearch().click();
         //tunggu hasil pencarian
         waitABit(500);
+
+    }
+
+    @Step
+    public void addToCart(){
         //add to cart
+        Config.ITEM_BOUGHT = shopPage.getItemToBeBought().getText();
         shopPage.getItemToBeBought().click();
     }
 
@@ -37,6 +44,11 @@ public class ShopBehaviour extends RegisterBehaviour {
             return true;
         else
             return false;
+    }
+
+    @Step
+    public void isCartAdded(){
+        TestCase.assertTrue(shopPage.getProductInfo().getText().equals(Config.ITEM_BOUGHT));
     }
 
 

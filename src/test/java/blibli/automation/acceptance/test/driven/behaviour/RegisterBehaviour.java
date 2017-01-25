@@ -37,6 +37,11 @@ public class RegisterBehaviour extends ScenarioSteps{
         registerPage.getPassword().type(Config.SIGNUP_PASSWORD);
         registerPage.getBtnDaftarSubmit().click();
 
+
+    }
+
+    @Step
+    public void checkVerificationPage(){
         //belum tau pake nunggu atau tidak masih perco
         if(registerPage.getDriver().getTitle().equals("Halaman Verifikasi | Blibli.com")){
             registerPage.getBtnVerifPhoneLater().click();
@@ -44,7 +49,6 @@ public class RegisterBehaviour extends ScenarioSteps{
             registerPage.getBtnVerifContinue().click();
         }
     }
-
 
 
     public void maximize(){
