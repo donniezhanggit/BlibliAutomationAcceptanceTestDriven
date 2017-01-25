@@ -7,4 +7,5 @@ public final class Config {
     public final static String SIGNUP_EMAIL="ssjdfnsjfnhb@mailinator.com";
     public final static String SIGNUP_PASSWORD="asdasdnj2132JN";
     public final static String URL_BLIBLI="http://www.blibli.com/";
+    public final static String SEARCH_PRODUCT="iphone";
 }

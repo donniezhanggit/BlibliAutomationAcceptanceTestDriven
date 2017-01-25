@@ -45,21 +45,12 @@ public class RegisterBehaviour extends ScenarioSteps{
         }
     }
 
-    @Step
-    public void verifyPhone(){
 
-    }
 
     public void maximize(){
         getDriver().manage().window().maximize();
     }
 
-    public boolean isInHomePage(){
-        if(registerPage.getDriver().getTitle().equals("Toko Online Blibli.com, Sensasi Belanja Online Shop ala Mall"))
-            return true;
-        else
-            return false;
 
-    }
 
 }

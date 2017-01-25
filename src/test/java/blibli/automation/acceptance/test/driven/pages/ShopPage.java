@@ -27,4 +27,51 @@ public class ShopPage extends PageObject{
     private WebElementFacade btnCheckout;
 
 
+    public WebElementFacade getSearchField() {
+        return searchField;
+    }
+
+    public void setSearchField(WebElementFacade searchField) {
+        this.searchField = searchField;
+    }
+
+    public WebElementFacade getBtnSearch() {
+        return btnSearch;
+    }
+
+    public void setBtnSearch(WebElementFacade btnSearch) {
+        this.btnSearch = btnSearch;
+    }
+
+    public WebElementFacade getItemToBeBought() {
+        return itemToBeBought;
+    }
+
+    public void setItemToBeBought(WebElementFacade itemToBeBought) {
+        this.itemToBeBought = itemToBeBought;
+    }
+
+    public WebElementFacade getBtnBuy() {
+        return btnBuy;
+    }
+
+    public void setBtnBuy(WebElementFacade btnBuy) {
+        this.btnBuy = btnBuy;
+    }
+
+    public WebElementFacade getBtnCart() {
+        return btnCart;
+    }
+
+    public void setBtnCart(WebElementFacade btnCart) {
+        this.btnCart = btnCart;
+    }
+
+    public WebElementFacade getBtnCheckout() {
+        return btnCheckout;
+    }
+
+    public void setBtnCheckout(WebElementFacade btnCheckout) {
+        this.btnCheckout = btnCheckout;
+    }
 }
