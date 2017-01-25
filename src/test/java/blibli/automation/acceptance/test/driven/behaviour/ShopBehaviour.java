@@ -13,6 +13,10 @@ public class ShopBehaviour extends RegisterBehaviour {
 
     @Step
     public void searchProduct(){
+        shopPage.setDriver(registerPage.getDriver());
+//        shopPage.getDriver().get(Config.URL_BLIBLI);
+//        getDriver().manage().window().maximize();
+
         if(!isInHomePage()){
             //register lagi mungkin. atau login.
         }

@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 public class RegisterBehaviour extends ScenarioSteps{
     private static final Logger LOG = LoggerFactory.getLogger(RegisterBehaviour.class);
 
-    private RegisterPage registerPage;
+    RegisterPage registerPage;
 
     public void waitForLoadingAjax(){
         waitABit(500);
